@@ -1,33 +1,33 @@
 // function to generate markdown for README
+
 function generateMarkdown(data) {
     return `
-  # ${data.title}
-  # Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Test](#test)
-  - [License](#license)
-  - [Questions](questions)
-  ## Description:
-  ${data.description}
-  ## Installation:
-  ${data.installation}
-  ## Usage:
-  ${data.usage}
-  ## Contribution:
-  ${data.contribution}
-  ## Test:
-  ${data.test}
-  ## License:
-  ![License](https://img.shields.io/badge/License-${data.license}-blue.svg 'License Badge')
-  ${data.license}
-  ## Questions:
-  If you have any questions please feel free to contact me using the following links:
-  Github: [Github](https://github.com/${data.username})
-  Email: ${data.email}
-  `;
+
+# ${data.Title}
+https://github.com/${data.Username}/${data.Title}
+# Description
+${data.Description}
+# Table of Contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+# Installation
+The following necessary dependencies must be installed to run the application properly: ${data.Installation}
+# Usage
+In order to use this app, ${data.Usage}
+# License
+This project is licensed under the ${data.License} license. 
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# Contributing
+​Contributors: ${data.Contributing}
+# Tests
+The following is needed to run the test: ${data.Tests}
+# Questions
+If you have any questions about the repo, open an issue or contact ${data.Username} directly at : ${data.Email}.
+`
 }
 
 module.exports = generateMarkdown;
